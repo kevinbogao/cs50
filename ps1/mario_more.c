@@ -14,7 +14,6 @@ int main(void)
     // loop though the lines & print chars accordingly
     for (int i = 0; i < h; i++)
     {
-
         // print left spaces
         for (int j = 0; j < (h - i - 1); j++)
         {
