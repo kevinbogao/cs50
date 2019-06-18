@@ -20,7 +20,9 @@ int main(int argc, string argv[])
 
     for (int i = 0, k = 0, n = strlen(s), x = strlen(argv[1]); i < n; i++)
     {
-        // Store value of each key in key
+        // Each individual key in alphabet is the (k % length of the input key)th
+        // char of the input key; they then get subtracted by 'a' to get the
+        // numerical value of the shift value (i.e. int key)
         int key = tolower(argv[1][k % x]) - 'a';
 
         // For lowercase char
