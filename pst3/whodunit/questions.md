@@ -2,7 +2,7 @@
 
 ## What's `stdint.h`?
 
-It is a header file that provides a set of typedefs that specify exact-width integer types, together with the defined minimum and maximum allowable values for each type, using macros.
+`stdint.h` is a header file that provides a set of typedefs that specify exact-width integer types, together with the defined minimum and maximum allowable values for each type, using macros.
 
 ## What's the point of using `uint8_t`, `uint32_t`, `int32_t`, and `uint16_t` in a program?
 
