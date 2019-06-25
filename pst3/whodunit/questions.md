@@ -21,7 +21,7 @@ TODO
 
 ## What's the difference between `bfSize` and `biSize`?
 
-bfSize is the size of the bitmap file in bytes, where as biSize is the size of the BITMAPINFOHEADER only (40 bytes).
+`bfSize` is the size of the bitmap file in bytes, where as `biSize` is the size of the `BITMAPINFOHEADER` only (40 bytes).
 
 ## What does it mean if `biHeight` is negative?
 
