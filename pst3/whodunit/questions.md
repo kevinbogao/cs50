@@ -10,10 +10,10 @@ TODO
 
 ## How many bytes is a `BYTE`, a `DWORD`, a `LONG`, and a `WORD`, respectively?
 
-BYTE:  1 byte
-DWORD: 4 bytes
-LONG:  4 bytes
-WORD:  2 bytes
+* BYTE:  1 byte
+* DWORD: 4 bytes
+* LONG:  4 bytes
+* WORD:  2 bytes
 
 ## What (in ASCII, decimal, or hexadecimal) must the first two bytes of any BMP file be? Leading bytes used to identify file formats (with high probability) are generally called "magic numbers."
 
