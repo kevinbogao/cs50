@@ -45,6 +45,13 @@ The third argument represents the number of items to read. Since they are is onl
 int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
 ```
 
+The value of sizeof(RGBTRIPLE) is 3 bytes, and if bi.biWidth = 3
+
+```
+padding = (4 - (3 * 3) % 4) % 4
+padding = 3
+```
+
 ## What does `fseek` do?
 
 TODO
