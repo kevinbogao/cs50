@@ -54,8 +54,8 @@ padding = 3
 
 ## What does `fseek` do?
 
-TODO
+`fseek` skips over any padding and looks for the next pixel represented by RGB triple.
 
 ## What is `SEEK_CUR`?
 
-TODO
+`SEEK_CUR` is a pointer that indicates the offset relative to the current position. It is used to skip over the padding in `copy.c`
