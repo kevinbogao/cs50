@@ -17,7 +17,7 @@ TODO
 
 ## What (in ASCII, decimal, or hexadecimal) must the first two bytes of any BMP file be? Leading bytes used to identify file formats (with high probability) are generally called "magic numbers."
 
-The first two bytes of a BMP file are the character "B" and "M" in `ASCII`. They specifie the file type, and it is denoted in `0x4d42`.
+The first two bytes of a BMP file are the character "B" and "M" in `ASCII`. They specifie the file type, and it is denoted as `0x4d42`.
 
 ## What's the difference between `bfSize` and `biSize`?
 
