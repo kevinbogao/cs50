@@ -41,9 +41,9 @@ The third argument represents the number of items to read. Since they are is onl
 
 ## What value does `copy.c` assign to `padding` if `bi.biWidth` is `3`?
 
-"""
+```
 int padding = (4 - (bi.biWidth * sizeof(RGBTRIPLE)) % 4) % 4;
-"""
+```
 
 ## What does `fseek` do?
 
