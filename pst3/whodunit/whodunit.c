@@ -74,6 +74,23 @@ int main(int argc, char *argv[])
             // read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
+            /*
+               if a pixel has a red value greater than 0xfc (252 in decimal)
+               change its colour to white, else change it to black
+            */
+            if (triple.rgbtRed > 0xfc)
+            {
+                triple.rgbtRed = 0xff;
+                triple.rgbtGreen = 0xff;
+                triple.rgbtBlue = 0xff;
+            }
+            else
+            {
+                triple.rgbtRed = 0x00;
+                triple.rgbtGreen = 0x00;
+                triple.rgbtBlue = 0x00;
+            }
+
             // write RGB triple to outfile
             fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
         }
