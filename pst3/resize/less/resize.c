@@ -87,7 +87,6 @@ int main(int argc, char *argv[])
     // write outfile's BITMAPINFOHEADER
     fwrite(&bi, sizeof(BITMAPINFOHEADER), 1, outptr);
 
-
     // iterate over infile's scanlines
     for (int i = 0, biHeight = abs(biHeightIn); i < biHeight; i++)
     {
