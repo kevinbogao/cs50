@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     char *infile = argv[2];
     char *outfile = argv[3];
 
-    // check if factor is in ranger
+    // ensure factor is in ranger
     if (factor < 1 || factor > 100)
     {
         fprintf(stderr, "The first argument must be an integer within 1 to 100\n");
