@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
         fclose(outptr);
         fclose(inptr);
         fprintf(stderr, "Unsupported file format.\n");
-        return 4;
+        return 5;
     }
 
     // infile's property
