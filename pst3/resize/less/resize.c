@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
     int biWidthIn = bi.biWidth;
     int biHeightIn = bi.biHeight;
 
-    // out's property
+    // outfile's property
     bi.biWidth *= factor;
     bi.biHeight *= factor;
 
