@@ -19,10 +19,10 @@ int main(int argc, char *argv[])
     char *infile = argv[2];
     char *outfile = argv[3];
 
-    // make sure n is a positive integer less than or equal to 100
+    // check if factor is in ranger
     if (factor < 1 || factor > 100)
     {
-        fprintf(stderr, "The first argument must be a positive integer less than or equal to 100\n");
+        fprintf(stderr, "The first argument must be an integer within 1 to 100\n");
         return 2;
     }
 
