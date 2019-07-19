@@ -1,8 +1,12 @@
+/* Working in progress */
+
 // Implements a dictionary's functionality
 
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include "dictionary.h"
 
@@ -49,7 +53,21 @@ bool load(const char *dictionary)
     // Insert words into hash table
     while (fscanf(file, "%s", word) != EOF)
     {
-        // TODO
+        // Allocate memory for word
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            unload();
+            return false;
+        }
+
+        // Hash word for index
+        int index = hash(word);
+
+        // Insert word to begining of bucket
+        strcpy(n->word, word);
+        n->next = hashtable[index];
+        hashtable[index] = n;
     }
 
     // Close dictionary
@@ -62,8 +80,20 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded else 0 if not yet loaded
 unsigned int size(void)
 {
-    // TODO
-    return 0;
+    // Declare counter
+    int word_count = 0;
+
+    // Loop through each bucket in the array
+    for (int i = 0; i < N; i++)
+    {
+        for (node *ptr = hashtable[i]; ptr != NULL; ptr = ptr->next)
+        {
+            word_count++;
+        }
+    }
+
+    // Return count
+    return word_count;
 }
 
 // Returns true if word is in dictionary else false
@@ -76,6 +106,16 @@ bool check(const char *word)
 // Unloads dictionary from memory, returning true if successful else false
 bool unload(void)
 {
+    for (int i = 0; i < N; i++)
+    {
+        node *ptr = hashtable[i];
+        while (ptr != NULL)
+        {
+            node *next = ptr->next;
+            free(ptr);
+            ptr = next;
+        }
+    }
     // TODO
     return false;
 }
