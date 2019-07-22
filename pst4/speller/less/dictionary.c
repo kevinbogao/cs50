@@ -1,5 +1,3 @@
-/* Working in progress */
-
 // Implements a dictionary's functionality
 
 #include <ctype.h>
@@ -99,7 +97,30 @@ unsigned int size(void)
 // Returns true if word is in dictionary else false
 bool check(const char *word)
 {
-    // TODO
+    // Lowercase the word
+    char word_lo[LENGTH + 1];
+    for (int i = 0, len = strlen(word_lo); i < len; i++)
+    {
+        word_lo[i] = tolower(word[i]);
+    }
+
+    // Hash word for index
+    int index = hash(word_lo);
+
+    // Check through the specific linked list
+    node *ptr = hashtable[index];
+    while (ptr != NULL)
+    {
+        if (strcmp(word_lo, ptr->word) == 0)
+        // if (ptr->word == word_lo)
+        {
+            return true;
+            break;
+        }
+        ptr = ptr->next;
+    }
+
+    // Indicate failure
     return false;
 }
 
@@ -116,6 +137,7 @@ bool unload(void)
             ptr = next;
         }
     }
-    // TODO
-    return false;
+
+    // Indicate success
+    return true;
 }
