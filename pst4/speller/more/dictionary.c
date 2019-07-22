@@ -58,7 +58,7 @@ bool load(const char *dictionary)
         for (int i = 0, n = strlen(word); i < n; i++)
         {
             // Index each char of word
-            int index = tolower(word[i] - 'a');
+            int index = tolower(word[i]) - 'a';
 
             // Check the value at childern[i]
             if (root->children[index] == NULL)
