@@ -99,7 +99,7 @@ bool check(const char *word)
 {
     // Lowercase the word
     char word_lo[LENGTH + 1];
-    for (int i = 0, len = strlen(word_lo); i < len; i++)
+    for (int i = 0, n = strlen(word_lo); i < n; i++)
     {
         word_lo[i] = tolower(word[i]);
     }
