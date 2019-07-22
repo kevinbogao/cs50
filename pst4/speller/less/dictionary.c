@@ -111,8 +111,8 @@ bool check(const char *word)
     node *ptr = hashtable[index];
     while (ptr != NULL)
     {
+        // Compare two strings
         if (strcmp(word_lo, ptr->word) == 0)
-        // if (ptr->word == word_lo)
         {
             return true;
             break;
