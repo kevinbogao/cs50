@@ -63,7 +63,7 @@ bool load(const char *dictionary)
             // Check the value at childern[i]
             if (root->children[index] == NULL)
             {
-                node *child = malloc(sizeof(node));;
+                node *child = malloc(sizeof(node));
                 root->children[index] = child;
 
                 // For last char of word
